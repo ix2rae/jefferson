@@ -1,0 +1,180 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #070910;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.topnav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #070910;
+    flex-direction: column;
+    width: 200px;
+    z-index: 999;
+}
+
+.topnav a:hover {
+    background-color: blue;
+    color: #ffffff;
+}
+
+.topnav a {
+    display: block;
+    padding: 12px 20px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnav-wrapper:hover .topnav {
+    display: flex;
+}
+
+.topnav-wrapper:hover .eye-icon img {
+    content: url('../img/open.webp');
+}
+
+.topnav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.topnav-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #070910;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.eye-icon {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.eye-icon img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.header {
+    background-image: url(../img/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 585px;
+    display: grid;
+    padding: 100px 50px;
+}
+
+.overlay {
+    place-self: flex-end;
+    background-color: rgba(0, 0, 0, 0.726);
+    text-align: flex-end;
+    color: #ffffff;
+    padding: 70px;
+    width: 30%;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.about {
+    padding: 60px 50px;
+    display: flex;
+    background-color: #000000;
+    color: #fff;
+}
+
+.content {
+    place-self: center;
+    text-align: center;
+    line-height: 22px;
+    padding: 50px 50px 50px 0px;
+    width: 50%;
+    letter-spacing: 0.8px;
+}
+
+.about-image {
+    place-self: center;
+    width: 50%;
+}
+
+.about-image img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.centerdiv a i {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerdiv {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .topnav {
+        flex-direction: column;
+    }
+
+    .overlay {
+        width: 100%;
+        padding: 50px;
+        text-align: center;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content, .about-image {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+    }
+}
